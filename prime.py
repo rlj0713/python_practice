@@ -3,7 +3,7 @@ import time
 start_time = time.perf_counter()
 
 list_of_primes = [2]
-old_list = [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+old_list = [2]
 
 def is_prime(x):
   
@@ -24,6 +24,7 @@ while len(list_of_primes) <= 10001:
     if j % k != 0:
       if is_prime(j):  
         list_of_primes.append(j)
+        old_list.insert(0, j)
       j += 1
 
 print(list_of_primes[-2])
