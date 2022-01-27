@@ -7,8 +7,9 @@
 # sudo apt install python3-pip
 # pip install num2words
 
-import num2words
+from num2words import num2words
+import re
 
-print(num2words(42))
+print(num2words(115))
 
 # def sum_this_number(x):
