@@ -2,3 +2,13 @@
 
 # If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
 
+
+# sudo apt update
+# sudo apt install python3-pip
+# pip install num2words
+
+import num2words
+
+print(num2words(42))
+
+# def sum_this_number(x):
