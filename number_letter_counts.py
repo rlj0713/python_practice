@@ -10,6 +10,9 @@
 from num2words import num2words
 import re
 
-print(num2words(115))
+def sum_this_number(x):
+    string = num2words(x)
+    string_without_spaces = re.findall(r"\S", string)
+    return len(string_without_spaces)
 
-# def sum_this_number(x):
+print(sum_this_number(115))
