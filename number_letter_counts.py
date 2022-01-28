@@ -17,7 +17,7 @@ def sum_this_number(x):
 
 
 total = 0
-for i in range(1000):
+for i in range(1, 1001):
     total += sum_this_number(i)
 
 print(total)
