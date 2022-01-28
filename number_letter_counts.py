@@ -12,7 +12,12 @@ import re
 
 def sum_this_number(x):
     string = num2words(x)
-    string_without_spaces = re.findall(r"\S", string)
+    string_without_spaces = re.findall(r"\w", string)
     return len(string_without_spaces)
 
-print(sum_this_number(115))
+
+total = 0
+for i in range(1000):
+    total += sum_this_number(i)
+
+print(total)
