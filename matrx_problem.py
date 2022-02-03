@@ -1,4 +1,6 @@
 import math
+import random
+from webbrowser import get
 
 nums = open('matrix_test.txt', 'r+')
 content = nums.read()
@@ -39,8 +41,23 @@ route1 = v11.value + v21.value + v31.value + v41.value + v51.value + v52.value +
 route2 = v11.value + v21.value + v31.value + v41.value + v42.value + v52.value + v53.value + v54.value + v55.value
 route3 = v11.value + v21.value + v31.value + v41.value + v42.value + v43.value + v53.value + v54.value + v55.value
 
+def generate_route_list():
+    route = [11]
+    i = 11
+    while len(route) < 9:
+        to_add = random.choice([1, 10])
+        i += to_add
+        
+        route.append(i)
+    print(route)
+    return route
+
 print(route1)
 print(route2)
 print(route3)
 
+generate_route_list()
 
+# TO DO - Use the random generator to append routes to the master list
+# Use a unique? comparison to populate the list without repeating.
+list_of_all_possible_routes = []
