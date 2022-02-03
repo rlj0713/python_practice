@@ -36,7 +36,11 @@ check_number(v55)
 
 
 route1 = v11.value + v21.value + v31.value + v41.value + v51.value + v52.value + v53.value + v54.value + v55.value
+route2 = v11.value + v21.value + v31.value + v41.value + v42.value + v52.value + v53.value + v54.value + v55.value
+route3 = v11.value + v21.value + v31.value + v41.value + v42.value + v43.value + v53.value + v54.value + v55.value
 
 print(route1)
+print(route2)
+print(route3)
 
 
