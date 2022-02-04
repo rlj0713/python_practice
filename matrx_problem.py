@@ -2,9 +2,9 @@ import math
 import random
 from webbrowser import get
 
-nums = open('matrix_test.txt', 'r+')
+nums = open('p081_matrix.txt', 'r+')
 content = nums.read()
-content_list = content.split(", ")
+content_list = content.split(",")
 
 class Number:
     def __init__(self, row, column, value):
