@@ -30,16 +30,6 @@ for i in content_list:
 def check_number(object_name):
     print("row", object_name.row, "column", object_name.column, object_name.value)
 
-check_number(v11)
-check_number(v51)
-check_number(v23)
-check_number(v43)
-check_number(v55)
-
-
-route1 = v11.value + v21.value + v31.value + v41.value + v51.value + v52.value + v53.value + v54.value + v55.value
-route2 = v11.value + v21.value + v31.value + v41.value + v42.value + v52.value + v53.value + v54.value + v55.value
-route3 = v11.value + v21.value + v31.value + v41.value + v42.value + v43.value + v53.value + v54.value + v55.value
 
 def generate_route_list():
     route = [11]
@@ -49,15 +39,18 @@ def generate_route_list():
         i += to_add
         
         route.append(i)
-    print(route)
     return route
-
-print(route1)
-print(route2)
-print(route3)
 
 generate_route_list()
 
 # TO DO - Use the random generator to append routes to the master list
 # Use a unique? comparison to populate the list without repeating.
 list_of_all_possible_routes = []
+
+while len(list_of_all_possible_routes) < 18:
+    this_route = generate_route_list()
+    
+    if this_route not in list_of_all_possible_routes:
+        list_of_all_possible_routes.append(this_route)
+
+print(list_of_all_possible_routes)
