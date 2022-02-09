@@ -31,4 +31,8 @@ for i in c:
     if last_digit not in p10:
         p10.append(last_digit)
 
+p1.sort()
+p10.sort()
+
+print(p1)
 print(p10)
