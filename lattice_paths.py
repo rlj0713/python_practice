@@ -5,4 +5,18 @@ import random
 starting_point = [0, 0]
 ending_point = [2, 2]
 
-print(random.randint(0, 1))
+def random_index():
+    return(random.randint(0, 1))
+
+
+def next_position(last_position, square_size):
+    while last_position != ending_point:
+        random_num = random_index()
+        if last_position[random_num] < square_size and last_position[random_num] != last_position:
+            last_position[random_num] += 1
+            return(last_position)
+        
+this_route = [[0, 0]]
+
+print(next_position(this_route[len(this_route) - 1], 2))
+
