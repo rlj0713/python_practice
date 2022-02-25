@@ -14,7 +14,7 @@ def generate_a_route():
     one_route = [[0, 0]]
     current_position = [0, 0]
     
-    while current_position != [20, 20]:    
+    while current_position != [8, 8]:    
         current_position = one_route[len(one_route) - 1]
 
         if random_index() == 0:
@@ -22,7 +22,7 @@ def generate_a_route():
         else:
             next_position = [current_position[0], current_position[1] + 1]
 
-        if next_position[0] != 21 and next_position[1] != 21:
+        if next_position[0] != 9 and next_position[1] != 9:
             one_route.append(next_position)
 
     return(one_route)
@@ -43,8 +43,9 @@ def add_a_route():
     new_route = generate_a_route_as_a_string()
     return new_route
 
-while len(array_of_all_routes) < 137846528000:
+while len(array_of_all_routes) < 12870:
     route_to_add = add_a_route()
     if array_of_all_routes.count(route_to_add) == 0:
         array_of_all_routes.append(route_to_add)
 
+print(array_of_all_routes)
