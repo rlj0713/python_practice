@@ -9,14 +9,42 @@ def random_index():
     return(random.randint(0, 1))
 
 
-def next_position(last_position, square_size):
-    while last_position != ending_point:
-        random_num = random_index()
-        if last_position[random_num] < square_size and last_position[random_num] != last_position:
-            last_position[random_num] += 1
-            return(last_position)
-        
-this_route = [[0, 0]]
+def generate_a_route():
 
-print(next_position(this_route[len(this_route) - 1], 2))
+    one_route = [[0, 0]]
+    current_position = [0, 0]
+    
+    while current_position != [20, 20]:    
+        current_position = one_route[len(one_route) - 1]
+
+        if random_index() == 0:
+            next_position = [current_position[0] + 1, current_position[1]]
+        else:
+            next_position = [current_position[0], current_position[1] + 1]
+
+        if next_position[0] != 21 and next_position[1] != 21:
+            one_route.append(next_position)
+
+    return(one_route)
+           
+
+def generate_a_route_as_a_string():
+    this_route = generate_a_route()
+    string_route = ''
+    for i in this_route:
+        for j in i:
+            y = str(j)
+            string_route += y
+    return(string_route)
+
+array_of_all_routes = []
+
+def add_a_route():
+    new_route = generate_a_route_as_a_string()
+    return new_route
+
+while len(array_of_all_routes) < 137846528000:
+    route_to_add = add_a_route()
+    if array_of_all_routes.count(route_to_add) == 0:
+        array_of_all_routes.append(route_to_add)
 
