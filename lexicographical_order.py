@@ -13,4 +13,4 @@ for i in list(all_p):
         this_set += i[j]
     list_of_all_permutations.append(this_set)
 
-print(list_of_all_permutations[999999])
+print(list_of_all_permutations[99999])
