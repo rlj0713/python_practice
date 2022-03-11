@@ -48,4 +48,4 @@ while len(array_of_all_routes) < 12870:
     if array_of_all_routes.count(route_to_add) == 0:
         array_of_all_routes.append(route_to_add)
 
-print(array_of_all_routes)
+
